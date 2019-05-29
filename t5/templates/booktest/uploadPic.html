@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form action="/uploadHandle" method="post" enctype="multipart/form-data">
+<input type="file" name="pic1">
+{%csrf_token%}
+<br>
+<input type="submit" name="上传">
+</form>
+</body>
+</html>

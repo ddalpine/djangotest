@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title</title>
+</head>
+<body>
+
+<a href="{% url 'booktest:show' '456' '789' %}">显示</a>	
+<hr>
+
+{{hero.showname}}
+<hr>
+<ul>
+{%for hero in list%}
+	{%if forloop.counter|divisibleby:"2"%}
+<li style="color:red">{{ forloop.counter}}:{{hero.showname}}</li>
+	{%else%}
+<li style="color:blue">{{ forloop.counter}}:{{hero.showname}}</li>	
+{%endif%}
+{%empty%}
+	<li>#啥也找不到</li>
+{%endfor%}
+</ul>
+</body>
+</html>
